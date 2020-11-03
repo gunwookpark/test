@@ -1,0 +1,72 @@
+#########################################################
+#id-GPA Parameters:-------------------------------------#
+#########################################################
+The_Number_of_Threads = 5
+
+NGlycopeptide_search = no
+OGlycopeptide_search = yes
+multiple_glycosylation_sites = no
+
+ms2_count_peaks = 20
+ms2_noise_threshold = 2.0
+
+ms1_intensity_threshold = 50.0
+precursor_charge = 2
+precursor_isolation_window = 2.5
+isotope_cluster_tolerance = 0.015
+Monoisotopic_peak_selection_method = 3
+
+precursor_mass_tolerance = 0.02
+hcd_mass_tolerance = 0.02
+cid_mass_tolerance = 0.05
+etd_mass_tolerance = 0.05
+
+#########################################################
+#id-GPA Parameters for M-score:-------------------------#
+#########################################################
+Mscore_R2 = 0.5
+Mscore_tolerance = 0.5
+#--- Glycopeptide = 1.5, Glycan = 0.75 (Mscore>1.5)
+Mscore_threshold = 1.0
+
+#--- GluNAc / GalNAc (default = 3.0)
+GGRatio_threshold = 10.0
+#--- Sialic acids (default=10~20.0)
+SialicAcid_score_threshold = 15.0
+Glycan_modification_search = no
+
+#########################################################
+#id-GPA Parameters for S-score:-------------------------#
+#########################################################
+# Peptide_Modification,Number of Modification: None,0; Acetyl,1; iTRAQ4plex,1; TMT0plex,2
+Peptide_modification_search = None,0
+#--- Similarity Score with GPA-DB (Sscore>98)
+Sscore_threshold = 98.0
+
+#########################################################
+#id-GPA Parameters for Y-score:-------------------------#
+#########################################################
+#--- Estimate false discovery rate (FDR)
+#in CID, HCD and HCD+CID (FDR<1%, if FDR==100.0, User input)
+Yrank = 1
+Y1_Relative_intensity = 2.0
+estimated_FDR = 100.0
+#--- User Input
+Yscore_threshold = 60.0
+
+#########################################################
+#q-GPA Parameters:--------------------------------------#
+#########################################################
+#--- (yes or no)
+show_chromatogram = no
+#--- (+- 5.0min) (5~oo)
+retention_time_tolerance = 5.0
+#--- (0.5~1.0 percent)
+in_source_decay_method = no
+in_source_decay_window = 0.5
+
+#########################################################
+#Family Search Parameters:------------------------------#
+#########################################################
+fs_rt_tolerance = 10.0
+spectrum_similarity_threshold = 0.9
